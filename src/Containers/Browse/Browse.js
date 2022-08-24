@@ -168,7 +168,7 @@ const Browse = props => {
                       Clear Filter
                     </button>
                   </div>
-                  
+                       
                 </div>
 
                     <Grid 

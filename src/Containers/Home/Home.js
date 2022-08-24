@@ -1,20 +1,12 @@
 import React, { useState } from 'react';
 import styles from './Home.module.css';
-import NavBar from '../../Components/NavBar/NavBar';
-import { ReactComponent as GitHubLogo } from "../../Resources/image/githublogo.svg";
+
 import { ReactComponent as Enter } from "../../Resources/image/enter.svg";
-import { ReactComponent as Dice } from "../../Resources/image/dice.svg";
-import { ReactComponent as LinkedIn } from "../../Resources/image/linkedin.svg";
-import { ReactComponent as Game } from "../../Resources/image/game.svg";
-import { ReactComponent as NotFound } from "../../Resources/image/notfound.svg";
-import { ReactComponent as NotFoundQuery } from "../../Resources/image/notfoundquery.svg";
-import { ReactComponent as Git } from "../../Resources/image/git.svg";
-import { ReactComponent as Performance } from "../../Resources/image/performance.svg";
-import { ReactComponent as Sources } from "../../Resources/image/sources.svg";
+
 import { motion, AnimatePresence, m } from "framer-motion";
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import Cart from '../../Components/Cart/Cart';
-import AnimatedScroll from '../AnimatedPage/AnimatedScroll';
+
 import games from '../../utils/games';
 
 const Home = props => {
