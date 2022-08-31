@@ -1,6 +1,6 @@
-import logo from './logo.svg';
-import styles from './App.module.css';
-import { BrowserRouter, Routes, Route, useNavigate, useLocation } from "react-router-dom";
+
+// import styles from './App.module.css';
+import {  Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import Browse from './Containers/Browse/Browse';
 import GamePage from './Containers/GamePage/GamePage';
@@ -10,7 +10,7 @@ import { AnimatePresence } from "framer-motion";
 import filterNames from './utils/filterNames';
 import games from './utils/games';
 import templateGame from './utils/templateGame';
-import Cart from './Components/Cart/Cart';
+// import Cart from './Components/Cart/Cart';
 
 function App() {
   const [currentFilter, setCurrentFilter] = useState("none");
@@ -133,10 +133,10 @@ function App() {
 const navigate = useNavigate();
 const location = useLocation();
 
-if (location.pathname != "/react-ecommerce-store/" && location.pathname != "/react-ecommerce-store/browse" && selectedGame === false) {
+if (location.pathname !== "/react-ecommerce-store/" && location.pathname !== "/react-ecommerce-store/browse" && selectedGame === false) {
   let surname = location.pathname.substring(29);
   let currentGame = games.find(game => game.surname === surname);
-  if (currentGame != undefined) {
+  if (currentGame !== undefined) {
     setSelectedGame(currentGame);
   } else {
     setSelectedGame(templateGame);
@@ -169,7 +169,7 @@ const handleSearchSubmit = (e) => {
   e.preventDefault();
   setSearching(true);
 
-  if (location.pathname != "/react-ecommerce-store/browse") {
+  if (location.pathname !== "/react-ecommerce-store/browse") {
     navigate('/react-ecommerce-store/browse');
   }
 }
@@ -181,7 +181,7 @@ const handleSelect = (e) => {
 const handleSelectGame = (e) => {
   if (e.target.tagName === "BUTTON") {
     return
-  } else if (e.target.classList[0] != "AddToCart_addToCart__zbJPe") {
+  } else if (e.target.classList[0] !== "AddToCart_addToCart__zbJPe") {
         setSelectedGame(games[e.target.parentNode.id]);
         navigate(`/react-ecommerce-store/games/${games[e.target.parentNode.id].surname}`);
   }
@@ -189,7 +189,7 @@ const handleSelectGame = (e) => {
 
 const handleLike = (e) => {
   let handledLike = allGames.map((game, i) => {
-    if (e.target.id == i) {
+    if (e.target.id === i) {
       game.isLiked = !game.isLiked
       return game
     } else {
@@ -218,7 +218,7 @@ const handleHover = (e) => {
   }
 
   let newHoverState = hoverState.map((element, i) => {
-    if (e.target.id == i) {
+    if (e.target.id === i) {
       element.hovered = !element.hovered;
       return element
     } else {
@@ -231,7 +231,7 @@ const handleHover = (e) => {
 
 const handleHoverGame = (e) => {
   let handledHoveredGame = allGames.map((game, i) => {
-    if (e.target.id == i) {
+    if (e.target.id === i) {
       game.isHovered = !game.isHovered
       return game
     } else {
@@ -245,7 +245,7 @@ const handleHoverGame = (e) => {
 const handleAddToCart = (e) => {
   let handledAddedGame = allGames.map((game, i) => {
     if (location.pathname === "/react-ecommerce-store/browse") {
-      if (e.target.id == i) {
+      if (e.target.id === i) {
         game.inCart = true
         let newCart = cart;
         newCart.push(game);
@@ -256,7 +256,7 @@ const handleAddToCart = (e) => {
         return game;
       }
     } else {
-        if (selectedGame.id == i) {
+        if (selectedGame.id === i) {
           game.inCart = true
           let newCart = cart;
           newCart.push(game);
@@ -289,9 +289,9 @@ const clearCart = () => {
 }
 
 const handleRemoveFromCart = (e) => {
-  let removedIndex = cart.findIndex(game => game.id == e.target.id);
+  let removedIndex = cart.findIndex(game => game.id === e.target.id);
   let newAllGames = allGames.map((game, i) => {
-    if (game.id == e.target.id) {
+    if (game.id === e.target.id) {
       game.inCart = false;
       game.isHovered = false;
       return game;
@@ -317,7 +317,7 @@ useEffect(() => {
     setBrowsing(true);
   }
 
-  if (location.pathname != "/react-ecommerce-store/browse") {
+  if (location.pathname !== "/react-ecommerce-store/browse") {
     document.body.style.overflow = "hidden";
 
   } else if (location.pathname === "/react-ecommerce-store/browse") {
@@ -450,7 +450,6 @@ useEffect(() => {
                             handleRemoveFromCart={handleRemoveFromCart}
                             openGamePage={openGamePage}
           />} />
-          <Route path='react-ecommerce-store/browse/cart' element={<Cart/>}/>
           </Routes>
       </AnimatePresence>
   );
