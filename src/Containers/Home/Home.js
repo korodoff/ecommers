@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import styles from './Home.module.css';
 
 import { ReactComponent as Enter } from "../../Resources/image/enter.svg";
 
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink,  } from 'react-router-dom';
 import Cart from '../../Components/Cart/Cart';
 
 // import games from '../../utils/games';
@@ -21,14 +21,14 @@ const Home = props => {
     hoverState,
     setHoverState,
   
-    setOverlap,
+    // setOverlap,
     openGamePage
   } = props;
 
-  const [ setBrowsing] = useState(false);
+  // const [ setBrowsing] = useState(false);
   // const [landingPage, setLandingPage] = useState(true);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleHover = (e) => {
     let newHoverState = hoverState[e.target.id];
@@ -39,13 +39,13 @@ const Home = props => {
     ]);
   }
 
-  const handleBrowse = () => {
-    setOverlap(true);
-    setTimeout(() => {
-      setBrowsing(true);
-      navigate('/react-ecommerce-store/browse');
-    }, 1500);
-  }
+  // const handleBrowse = () => {
+  //   setOverlap(true);
+  //   setTimeout(() => {
+  //     setBrowsing(true);
+  //     navigate('/react-ecommerce-store/browse');
+  //   }, 1500);
+  // }
 
   // const handleHome = () => {
   //   setBrowsing(false);
@@ -123,7 +123,7 @@ const Home = props => {
                        <div><h1>Game Store</h1></div><br/>
                         <div className={styles.buttons}>
                           <NavLink to="/react-ecommerce-store/browse">
-                              <span className={`${styles.cta} ${styles.browseBtn}`} onClick={handleBrowse} aria-label="Browse">
+                              <span className={`${styles.cta} ${styles.browseBtn}`}  aria-label="Browse">
                                 <Enter className={styles.ctaSVG} />
                                 Browse
                               </span>

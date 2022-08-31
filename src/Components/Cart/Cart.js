@@ -2,17 +2,15 @@ import styles from './Cart.module.css';
 import React, { useState } from 'react';
 import { ReactComponent as Right } from "../../Resources/image/arrowRight.svg";
 import { ReactComponent as Cross } from "../../Resources/image/cross.svg";
-import { motion, AnimatePresence } from "framer-motion";
-import AnimatedCart from '../../Containers/AnimatedPage/AnimatedCart';
-import AnimatedCard from '../../Containers/AnimatedPage/AnimatedCard';
+
 
 const Cart = props => {
     const {
         cartAmount,
         cart,
-        handleOpenCart,
+        // handleOpenCart,
         handleCloseCart,
-        cartDisplayed,
+        // cartDisplayed,
         handleHover,
         hoverState,
         clearCart,
@@ -31,6 +29,7 @@ const Cart = props => {
             setTotal(newTotal);
         }
     })
+    console.log(total)
 
     // const variants = {
     //     initial: { x: 100 },
@@ -72,7 +71,7 @@ const Cart = props => {
                                                   </button>
                                               </div>
                                             </div>
-                                            {/* </motion.div> */}
+                                            
                                 })}
                             </div>
                         </div>

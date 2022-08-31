@@ -6,26 +6,26 @@ import { motion } from "framer-motion";
 import AddToCart from '../AddToCart/AddToCart';
 import AddedToCart from '../AddedToCart/AddedToCart';
 // import AnimatedCard from '../../Containers/AnimatedPage/AnimatedCard';
-import { useLocation } from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 
 const Card = props => {
     const { 
         game,
         handleAddToCart,
-        handleHover,
+        // handleHover,
         hoverState,
-        handleLike,
+        // handleLike,
         handleHoverGame,
         handleSelectGame
       } = props;
 
-    const variants = {
-        initial: { opacity: 0 },
-        animate: { opacity: 1 },
-        exit: { opacity: 0 },
-    }
+    // const variants = {
+    //     initial: { opacity: 0 },
+    //     animate: { opacity: 1 },
+    //     exit: { opacity: 0 },
+    // }
 
-    const location = useLocation();
+    // const location = useLocation();
 
     return (
           <motion.div 
@@ -38,7 +38,8 @@ const Card = props => {
             // animate="animate"
             // exit="exit"
           >
-            <img src={game.cover} className={styles.img} alt="Game Cover Image" />
+            
+            <img src={game.cover} className={styles.img} alt="big" />
     
             <div className={styles.price}>
                     {game.inCart ? <AddedToCart /> : <AddToCart 
