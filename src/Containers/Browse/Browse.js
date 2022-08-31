@@ -2,15 +2,15 @@ import styles from './Browse.module.css';
 import React, { useEffect, useState } from 'react';
 import NavBar from '../../Components/NavBar/NavBar';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { AnimatePresence } from "framer-motion";
-import AnimatedPage from '../AnimatedPage/AnimatedPage';
-import { ReactComponent as Grids } from "../../Resources/image/grid.svg";
-import { ReactComponent as Columns } from "../../Resources/image/columns.svg";
+// import { AnimatePresence } from "framer-motion";
+// import AnimatedPage from '../AnimatedPage/AnimatedPage';
+// import { ReactComponent as Grids } from "../../Resources/image/grid.svg";
+// import { ReactComponent as Columns } from "../../Resources/image/columns.svg";
 import Filters from '../../Components/Filters/Filters';
 import Grid from '../../Components/Grid/Grid';
-import games from '../../utils/games';
+// import games from '../../utils/games';
 import Cart from '../../Components/Cart/Cart';
-import Footer from '../../Components/Footer/Footer';
+// import Footer from '../../Components/Footer/Footer';
 
 const Browse = props => {
   const { 
@@ -138,7 +138,7 @@ const Browse = props => {
           handleOpenCart={handleOpenCart}
         />
 
-        <AnimatedPage exitBeforeEnter>
+        
             <div className={styles.browseContent}>
               <Filters 
                 hoverState={hoverState}
@@ -186,7 +186,7 @@ const Browse = props => {
                     />
               </div>
             </div>
-        </AnimatedPage>
+        
         
       </section>
     );

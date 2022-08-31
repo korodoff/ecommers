@@ -7,6 +7,7 @@ import { ReactComponent as GitHub } from "../../Resources/image/github.svg";
 import { ReactComponent as Search } from "../../Resources/image/search.svg";
 import { motion } from "framer-motion";
 import { useLocation, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = props => { 
     const {
@@ -118,6 +119,21 @@ const NavBar = props => {
             >
                 <GitHub className={styles.gh} />
                 <h3>Korodoff</h3>
+            </div>
+            <div 
+              className={styles.cartdiv} 
+              id="3"
+              onMouseEnter={handleHover}
+              onMouseLeave={handleHover}
+              
+            >
+              <NavLink to="/react-ecommerce-store/browse/cart"><div>Hello</div></NavLink>
+                <Cart 
+                  onClick={handleOpenCart} 
+                  className={styles.svg2} 
+                  style={{ fill: cartAmount ? "#90ee90" : "transparent", stroke: cartAmount ? "" : "#fff", strokeWidth: "34px" }}
+                />
+                <h3 onClick={handleOpenCart}>Cart: {cartAmount}</h3>
             </div>
 
            

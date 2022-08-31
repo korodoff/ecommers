@@ -89,16 +89,16 @@ const Home = props => {
 
   return (
     <div className={styles.main}>
-      {overlap ? 
+      {/* {overlap ? 
           <motion.div 
             className={styles.overlap}
-            variants={buttonVariants}
-            initial="hidden"
-            animate="visible"
+            // variants={buttonVariants}
+            // initial="hidden"
+            // animate="visible"
           >
     
           </motion.div> 
-      : null}
+      : null} */}
 
       {cartDisplayed ? <Cart 
               cartDisplayed={cartDisplayed} 

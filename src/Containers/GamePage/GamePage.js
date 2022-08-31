@@ -9,7 +9,7 @@ import { ReactComponent as Up } from "../../Resources/image/up.svg";
 import { ReactComponent as Down } from "../../Resources/image/down.svg";
 import { ReactComponent as Like } from "../../Resources/image/like.svg";
 import Slider from '../../Components/Slider/Slider';
-import games from '../../utils/games';
+// import games from '../../utils/games';
 import AnimatedText from '../AnimatedPage/AnimatedText';
 import { ReactComponent as Add } from "../../Resources/image/add.svg";
 import AddedToCartBig from '../../Components/AddedToCart/AddedToCartBig';

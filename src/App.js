@@ -10,6 +10,7 @@ import { AnimatePresence } from "framer-motion";
 import filterNames from './utils/filterNames';
 import games from './utils/games';
 import templateGame from './utils/templateGame';
+import Cart from './Components/Cart/Cart';
 
 function App() {
   const [currentFilter, setCurrentFilter] = useState("none");
@@ -449,6 +450,7 @@ useEffect(() => {
                             handleRemoveFromCart={handleRemoveFromCart}
                             openGamePage={openGamePage}
           />} />
+          <Route path='react-ecommerce-store/browse/cart' element={<Cart/>}/>
           </Routes>
       </AnimatePresence>
   );
