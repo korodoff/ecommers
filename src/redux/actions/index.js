@@ -11,3 +11,9 @@ export const delItem = (product) => {
         payload : product
     }
 }
+export const filterChange = (product)=>{
+    return{
+        type: "filterChange",
+        payload: product
+    }
+}
